@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: grey;
+    }
+
+    /* NAVBAR STYLES */
+    nav {
+      background: #0d1b2a;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00b4d8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <nav>
+    <div class="logo">InfoteX</div>
+
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <!-- <a href="#">Projects</a> -->
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <section style="padding: 40px;">
+    <h1>Welcome to InfoteX IT</h1>
+    <p>We aim to bring you the best IT solutions and services</p>
+    <p>Our services include: <br>
+    <ul>
+        <li>Website development/building</li>
+        <li>Front-end Software Development</li>
+        <li>Back-end software development</li>
+        <li>Information Technology Training</li>
+    </ul>
+    </p>
+
+   <h3> Contact Us </h3>
+
+   <p>Phone number: +234 814 618 7087</p>
+   <p>Email: infotex@gmail.com</p>
+
+
+
+  </section>
+
+
+  <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value
+    };
+
+    const response = await fetch("http://localhost:3000/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+    document.getElementById("response").innerText = result.message;
+});
+</script>
+
+</body>
+</html>
