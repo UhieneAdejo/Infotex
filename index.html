@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +9,10 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: grey;
+      background: #f0f0f0;
     }
 
-    /* NAVBAR STYLES */
+    /* NAVBAR */
     nav {
       background: #0d1b2a;
       padding: 15px 20px;
@@ -42,24 +42,43 @@
     .nav-links a:hover {
       color: #00b4d8;
     }
+
+    .page-container {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #0d1b2a;
+    }
+
+    p {
+      line-height: 1.6;
+    }
   </style>
+
 </head>
 <body>
 
   <!-- NAV BAR -->
+
+<!--
   <nav>
     <div class="logo">InfoteX</div>
 
     <div class="nav-links">
-      <a href="home.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="About.html">About</a>
       <a href="services.html">Services</a>
-      <!-- <a href="#">Projects</a> -->
+      <!-- <a href="#">Projects</a> 
+      
       <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- PAGE CONTENT -->
+  <!-- PAGE CONTENT 
   <section style="padding: 40px;">
     <h1>Welcome to InfoteX IT</h1>
     <p>We aim to bring you the best IT solutions and services</p>
@@ -102,6 +121,571 @@ document.getElementById("contactForm").addEventListener("submit", async function
     document.getElementById("response").innerText = result.message;
 });
 </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfoteX IT</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      background: #0d1b2a;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo{
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .nav-links{
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover{
+      color: #00b4d8;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height: 100vh;
+      background: linear-gradient(rgba(13,27,42,0.8), rgba(13,27,42,0.8)),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content{
+      max-width: 700px;
+    }
+
+    .hero h1{
+      font-size: 58px;
+      margin-bottom: 20px;
+    }
+
+    .hero p{
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .hero button{
+      background: #00b4d8;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover{
+      background: #0096c7;
+      transform: translateY(-3px);
+    }
+
+    /* ABOUT */
+
+    .about{
+      padding: 90px 60px;
+      background: white;
+      text-align: center;
+    }
+
+    .about h2{
+      font-size: 38px;
+      margin-bottom: 25px;
+      color: #0d1b2a;
+    }
+
+    .about p{
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* SERVICES */
+
+    .services-section{
+      padding: 90px 60px;
+    }
+
+    .services-section h2{
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+      color: #0d1b2a;
+    }
+
+    .services{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card{
+      background: white;
+      width: 260px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover{
+      transform: translateY(-8px);
+    }
+
+    .card h3{
+      margin-bottom: 15px;
+      color: #0d1b2a;
+    }
+
+    .card p{
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-us{
+      padding: 90px 60px;
+      background: white;
+      text-align: center;
+    }
+
+    .why-us h2{
+      font-size: 38px;
+      margin-bottom: 50px;
+      color: #0d1b2a;
+    }
+
+    .why-container{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .why-card{
+      background: #f5f7fa;
+      width: 280px;
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .why-card:hover{
+      transform: translateY(-8px);
+    }
+
+    .why-card h3{
+      margin-bottom: 15px;
+      color: #0d1b2a;
+    }
+
+    /* PROJECTS */
+
+    .projects{
+      padding: 90px 60px;
+      background: #eef3f8;
+      text-align: center;
+    }
+
+    .projects h2{
+      font-size: 38px;
+      margin-bottom: 50px;
+      color: #0d1b2a;
+    }
+
+    .project-container{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-card{
+      background: white;
+      width: 280px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .project-card:hover{
+      transform: scale(1.03);
+    }
+
+    .project-card h3{
+      margin-bottom: 15px;
+      color: #0d1b2a;
+    }
+
+    .project-card p{
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* STATS */
+
+    .stats{
+      background: #0d1b2a;
+      color: white;
+      padding: 70px 40px;
+    }
+
+    .stats-container{
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .stat h2{
+      font-size: 45px;
+      margin-bottom: 10px;
+      color: #00b4d8;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      padding: 90px 60px;
+      text-align: center;
+      background: white;
+    }
+
+    .contact h2{
+      font-size: 38px;
+      margin-bottom: 25px;
+      color: #0d1b2a;
+    }
+
+    .contact p{
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background: #08121d;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 768px){
+
+      nav{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .hero h1{
+        font-size: 40px;
+      }
+
+      .hero p{
+        font-size: 16px;
+      }
+
+      .about,
+      .services-section,
+      .why-us,
+      .projects,
+      .contact{
+        padding: 60px 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">InfoteX</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Innovative IT Solutions For Modern Businesses</h1>
+
+      <p>
+        We build responsive websites, scalable software applications,
+        and modern digital solutions for businesses and individuals.
+      </p>
+
+      <button>Get Started</button>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <h2>About Us</h2>
+
+    <p>
+      InfoteX IT is a technology company dedicated to delivering
+      high-quality software solutions, web applications, and IT training.
+      We combine creativity, innovation, and technical expertise to help
+      businesses succeed in the digital world.
+    </p>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services-section">
+
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>Web Development</h3>
+
+        <p>
+          Responsive and modern websites tailored to your business needs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Frontend Development</h3>
+
+        <p>
+          Interactive and visually appealing interfaces using modern tools.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Backend Development</h3>
+
+        <p>
+          Secure and scalable backend systems and APIs for applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>IT Training</h3>
+
+        <p>
+          Practical technology training for students and professionals.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY US -->
+
+  <section class="why-us">
+
+    <h2>Why Choose InfoteX?</h2>
+
+    <div class="why-container">
+
+      <div class="why-card">
+
+        <h3>Experienced Team</h3>
+
+        <p>
+          Skilled developers delivering quality digital solutions.
+        </p>
+
+      </div>
+
+      <div class="why-card">
+
+        <h3>Modern Technologies</h3>
+
+        <p>
+          We use modern frameworks and technologies for scalability.
+        </p>
+
+      </div>
+
+      <div class="why-card">
+
+        <h3>Reliable Support</h3>
+
+        <p>
+          Continuous support and maintenance for all our clients.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects">
+
+    <h2>Recent Projects</h2>
+
+    <div class="project-container">
+
+      <div class="project-card">
+
+        <h3>E-Commerce Website</h3>
+
+        <p>
+          Modern online shopping platform with responsive design.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Business Dashboard</h3>
+
+        <p>
+          Dashboard system for managing company operations efficiently.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>School Portal</h3>
+
+        <p>
+          Web application for managing students and academic records.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stats-container">
+
+      <!-- <div class="stat">
+        <h2>50+</h2>
+        <p>Projects Completed</p>
+      </div> -->
+
+      <div class="stat">
+        <h2>20+</h2>
+        <p>Happy Clients</p>
+      </div>
+
+      <div class="stat">
+        <h2>5+</h2>
+        <p>Years Experience</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Phone: +234 814 618 7087</p>
+
+    <p>Email: infotex@gmail.com</p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 InfoteX IT. All Rights Reserved.
+  </footer>
 
 </body>
 </html>

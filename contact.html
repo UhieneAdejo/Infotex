@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,17 +76,17 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- NAVIGATION BAR
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="About.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT 
     <div class="container">
         <h1>Contact Us</h1>
         <p>If you would like to work with us or have any questions, feel free to reach out.</p>
@@ -147,5 +147,353 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
 });
 </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infotex - Contact</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #0f172a;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(15, 23, 42, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover{
+            color: #60a5fa;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact-section{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .contact-container{
+            width: 100%;
+            max-width: 1150px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        /* LEFT SIDE */
+
+        /* .contact-info{
+            padding: 70px 50px;
+            background: linear-gradient(to bottom right, #2563eb, #1e293b);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        } */
+        .contact-info{
+    padding: 70px 50px;
+    background: #111827;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        }
+
+        .contact-info h1{
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p{
+            line-height: 1.8;
+            color: #dbeafe;
+            margin-bottom: 35px;
+        }
+
+        .info-box{
+            margin-bottom: 25px;
+        }
+
+        .info-box h3{
+            margin-bottom: 8px;
+            color: #93c5fd;
+            font-size: 18px;
+        }
+
+        .info-box p{
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* RIGHT SIDE */
+
+        .contact-form-box{
+            background: white;
+            padding: 70px 50px;
+        }
+
+        .contact-form-box h2{
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #0f172a;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label{
+            margin-bottom: 8px;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        form input,
+        form textarea{
+            padding: 15px;
+            margin-bottom: 22px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        form input:focus,
+        form textarea:focus{
+            border-color: #2563eb;
+            box-shadow: 0 0 10px rgba(37,99,235,0.2);
+        }
+
+        form textarea{
+            resize: none;
+        }
+
+        button{
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        #response{
+            margin-top: 18px;
+            font-weight: 500;
+            color: #2563eb;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px){
+
+            .contact-container{
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info,
+            .contact-form-box{
+                padding: 50px 30px;
+            }
+
+            .contact-info h1{
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="contact-info">
+
+                <h1>Let's Work Together</h1>
+
+                <p>
+                    Need reliable IT solutions for your business or personal projects?
+                    Reach out to Infotex and let's create something amazing together.
+                </p>
+
+                <div class="info-box">
+                    <h3>Phone</h3>
+                    <p>+234 814 618 7087</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Email</h3>
+                    <p>infotex2026@gmail.com</p>
+                </div>
+
+            </div>
+<!-- RIGHT SIDE -->
+
+<div class="contact-form-box">
+
+    <form 
+        action="https://formspree.io/f/meennkpw"
+        method="POST"
+    >
+
+        <h2>Send a Message</h2>
+
+        <!-- Anti Spam -->
+
+        <input 
+            type="text" 
+            name="_gotcha"
+            style="display:none"
+        >
+
+        <label>Your Name</label>
+
+        <input 
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+        >
+
+        <label>Your Email</label>
+
+        <input 
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <label>Your Message</label>
+
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+            required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+<!-- 
+    <script>
+
+        document.getElementById("contactForm")
+        .addEventListener("submit", async function(e) {
+
+            e.preventDefault();
+
+            const formData = {
+                name: this.name.value,
+                email: this.email.value,
+                message: this.message.value
+            };
+
+            try {
+
+                const response = await fetch("/send-message", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                document.getElementById("response").innerText =
+                result.message;
+
+                if(result.success){
+                    document.getElementById("contactForm").reset();
+                }
+
+            } catch (error) {
+
+                document.getElementById("response").innerText =
+                "Error sending message.";
+
+                console.error(error);
+            }
+        });
+
+    </script>
+ -->
 </body>
 </html>

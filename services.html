@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,17 +58,17 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="About.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT 
     <div class="container">
         <h1>Our IT Services</h1>
         <p>At InfoteX IT, we offer a range of professional IT solutions tailored for businesses and individuals.</p>
@@ -93,6 +93,566 @@
             <p>We offer training in programming, web development, and essential IT skills for beginners and professionals.</p>
         </div>
     </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services – InfoteX IT</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      background: #0d1b2a;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo{
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .nav-links{
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover{
+      color: #00b4d8;
+    }
+
+    .active{
+      color: #00b4d8 !important;
+      font-weight: 600;
+    }
+
+    /* HERO SECTION */
+
+    .services-hero{
+      height: 55vh;
+      background: linear-gradient(rgba(13,27,42,0.85), rgba(13,27,42,0.85)),
+      url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .services-hero h1{
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .services-hero p{
+      font-size: 18px;
+      max-width: 700px;
+      line-height: 1.7;
+    }
+
+    /* MAIN SECTION */
+
+    .container{
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 60px;
+    }
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2{
+      font-size: 40px;
+      color: #0d1b2a;
+      margin-bottom: 15px;
+    }
+
+    .section-title p{
+      color: #666;
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* SERVICES GRID */
+
+    .services-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card{
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover{
+      transform: translateY(-10px);
+    }
+
+    .service-card::before{
+      content: "";
+      width: 100%;
+      height: 5px;
+      background: #00b4d8;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .service-card h3{
+      color: #0d1b2a;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .service-card p{
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .service-card button{
+      background: #00b4d8;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .service-card button:hover{
+      background: #0096c7;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-us{
+      margin-top: 100px;
+    }
+
+    .why-us h2{
+      text-align: center;
+      font-size: 40px;
+      color: #0d1b2a;
+      margin-bottom: 50px;
+    }
+
+    .why-container{
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .why-box{
+      background: white;
+      width: 300px;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .why-box:hover{
+      transform: translateY(-8px);
+    }
+
+    .why-box h3{
+      margin-bottom: 15px;
+      color: #0d1b2a;
+    }
+
+    .why-box p{
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* PROCESS SECTION */
+
+    .process{
+      margin-top: 100px;
+      background: #0d1b2a;
+      color: white;
+      padding: 70px 40px;
+      border-radius: 20px;
+    }
+
+    .process h2{
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 38px;
+    }
+
+    .process-steps{
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .step{
+      width: 240px;
+      text-align: center;
+    }
+
+    .step-number{
+      width: 70px;
+      height: 70px;
+      background: #00b4d8;
+      margin: auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .step h3{
+      margin-bottom: 15px;
+    }
+
+    .step p{
+      line-height: 1.7;
+      color: #d6d6d6;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background: #08121d;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 90px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 768px){
+
+      nav{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .services-hero h1{
+        font-size: 40px;
+      }
+
+      .services-hero p{
+        font-size: 16px;
+      }
+
+      .container{
+        padding: 60px 25px;
+      }
+
+      .section-title h2,
+      .why-us h2,
+      .process h2{
+        font-size: 32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">InfoteX</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="services-hero">
+
+    <div>
+
+      <h1>Our Services</h1>
+
+      <p>
+        We provide modern digital solutions designed to help
+        businesses grow, innovate, and succeed in the digital world.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="container">
+
+    <!-- TITLE -->
+
+    <div class="section-title">
+
+      <h2>Professional IT Solutions</h2>
+
+      <p>
+        At InfoteX IT, we offer a wide range of technology services
+        tailored to businesses, organizations, and individuals.
+      </p>
+
+    </div>
+
+    <!-- SERVICES GRID -->
+
+    <div class="services-grid">
+
+      <div class="service-card">
+
+        <h3>Website Development</h3>
+
+        <p>
+          We create responsive, modern, and visually appealing websites
+          for businesses, brands, and organizations.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>Frontend Development</h3>
+
+        <p>
+          Interactive and user-friendly interfaces using modern
+          technologies and frameworks.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>Backend Development</h3>
+
+        <p>
+          Secure and scalable backend systems, APIs,
+          and server-side applications.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>IT Training</h3>
+
+        <p>
+          Practical training programs in web development,
+          programming, and essential IT skills.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>UI / UX Design</h3>
+
+        <p>
+          Clean and modern user interface designs focused
+          on improving user experience.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+      <div class="service-card">
+
+        <h3>Technical Support</h3>
+
+        <p>
+          Reliable support and maintenance services
+          for software and digital systems.
+        </p>
+
+        <button>Learn More</button>
+
+      </div>
+
+    </div>
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us">
+
+      <h2>Why Choose Us?</h2>
+
+      <div class="why-container">
+
+        <div class="why-box">
+
+          <h3>Experienced Team</h3>
+
+          <p>
+            Skilled professionals delivering high-quality digital solutions.
+          </p>
+
+        </div>
+
+        <div class="why-box">
+
+          <h3>Modern Technologies</h3>
+
+          <p>
+            We use modern frameworks and technologies for scalability.
+          </p>
+
+        </div>
+
+        <div class="why-box">
+
+          <h3>Reliable Support</h3>
+
+          <p>
+            Continuous support and maintenance for all our clients.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROCESS -->
+
+    <section class="process">
+
+      <h2>Our Work Process</h2>
+
+      <div class="process-steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <h3>Planning</h3>
+
+          <p>
+            Understanding client goals and project requirements.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <h3>Development</h3>
+
+          <p>
+            Building scalable and modern digital solutions.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <h3>Launch</h3>
+
+          <p>
+            Testing, deployment, and continuous maintenance support.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 InfoteX IT. All Rights Reserved.
+  </footer>
 
 </body>
 </html>
